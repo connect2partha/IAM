@@ -287,7 +287,219 @@ flowchart TD
 
 ---
 
-## 11. Insider Threat and Privilege Abuse
+## 11. Common Techniques of Identity Theft
+
+Identity theft happens when someone uses another person's personal information — without consent — to impersonate them, gain access, or commit fraud. It affects individuals and organisations alike.
+
+> Like someone stealing your wallet, your ID card, and your signature — then pretending to be you everywhere.
+
+```mermaid
+mindmap
+  root((Identity Theft\nTechniques))
+    Digital
+      Phishing
+        Email phishing
+        Smishing SMS
+        Vishing voice call
+      Malware
+        Keyloggers
+        Spyware
+        RATs
+      Data Breach
+        Dark web purchase
+        Credential dumps
+      Account Takeover
+        Password reset abuse
+        SIM swap
+    Physical
+      Mail theft
+      Dumpster diving
+      Stolen wallet / documents
+      Shoulder surfing
+    Social Engineering
+      Pretexting
+      Impersonation
+      Romance scams
+    Financial
+      Card skimming
+      ATM skimmers
+      Synthetic identity fraud
+```
+
+### 11.1 Phishing — Email, SMS, and Voice
+
+The most common identity theft technique. Attacker impersonates a trusted organisation to trick the victim into revealing credentials or personal information.
+
+```mermaid
+flowchart TD
+    subgraph Email["📧 Email Phishing"]
+        E1[Fake email from 'your bank'] --> E2[Victim clicks link]
+        E2 --> E3[Fake login page — credentials stolen]
+    end
+
+    subgraph SMS["📱 Smishing (SMS Phishing)"]
+        S1["'Your package is held — verify identity'"] --> S2[Victim clicks SMS link]
+        S2 --> S3[Personal details harvested]
+    end
+
+    subgraph Voice["📞 Vishing (Voice Phishing)"]
+        V1["Caller: 'This is HMRC / IRS / bank security'"] --> V2[Victim provides SSN, DOB, password]
+        V2 --> V3[Caller uses info for fraud]
+    end
+```
+
+### 11.2 Data Breaches and Dark Web Purchase
+
+Attackers buy **leaked personal data** from past breaches — name, email, password, SSN, date of birth, address — and use it to impersonate victims.
+
+```mermaid
+flowchart LR
+    BREACH[Company data breach\ne.g. healthcare, retail, credit bureau] --> DUMP[Database of records\nname, email, SSN, DOB, address]
+    DUMP --> DARKWEB[Sold on dark web\nfor cents per record]
+    DARKWEB --> ATK[Attacker buys records]
+    ATK --> FRAUD1[Opens credit card\nin victim's name]
+    ATK --> FRAUD2[Files false tax return\nfor refund]
+    ATK --> FRAUD3[Takes over existing accounts\nusing personal info for verification]
+```
+
+### 11.3 Malware — Keyloggers and Spyware
+
+Malicious software silently records everything the victim types or views.
+
+| Malware Type | What it steals | How it gets installed |
+|---|---|---|
+| **Keylogger** | Passwords, credit card numbers, messages | Email attachment, fake software download |
+| **Spyware** | Browser history, saved passwords, files | Bundled with free software |
+| **RAT (Remote Access Trojan)** | Full system access, screenshots, webcam | Phishing, cracked software |
+| **Info-stealer** (Redline, Vidar) | Browser cookies, saved credentials | Malvertising, game cheats |
+
+### 11.4 Physical Identity Theft
+
+Not all identity theft is digital. Physical methods remain common.
+
+```mermaid
+flowchart TD
+    subgraph Physical["Physical Identity Theft Methods"]
+        MAIL[Mail Theft\nSteal credit card offers,\nbank statements, tax documents]
+        DUMPSTER[Dumpster Diving\nRecover discarded documents\nwith account numbers or SSNs]
+        SHOULDER[Shoulder Surfing\nWatch victim type PIN\nor password in public]
+        WALLET[Stolen Wallet\nPhysical ID, credit cards,\ninsurance cards]
+    end
+
+    subgraph Use["What attackers do with physical documents"]
+        F1[Open new credit accounts]
+        F2[Access existing bank accounts]
+        F3[Obtain medical care using victim's insurance]
+        F4[File fraudulent tax returns]
+    end
+
+    Physical --> Use
+```
+
+**Defence:** Shred documents before disposal. Use a P.O. box or mail lock. Use a PIN cover keypad when entering PINs.
+
+### 11.5 Social Engineering and Pretexting
+
+Attacker invents a believable scenario (pretext) to trick the victim or an organisation's staff into revealing information.
+
+```mermaid
+sequenceDiagram
+    participant ATK as Attacker
+    participant REP as Customer Service Rep
+    participant ACCT as Victim's Account
+
+    ATK->>REP: "Hi, I'm John Smith, DOB 15/03/1985.\nI've lost access to my account."
+    REP->>ATK: "Can you confirm your address?"
+    ATK->>REP: Provides address (found on LinkedIn / data broker)
+    REP->>ATK: "Security question: mother's maiden name?"
+    ATK->>REP: Provides answer (found on social media)
+    REP-->>ATK: Resets account credentials
+    ATK->>ACCT: Full access to victim's account
+```
+
+**Common pretexts:** "I'm from IT support", "I'm from your bank's fraud team", "I'm a government official".
+
+### 11.6 Card Skimming
+
+Physical devices attached to ATMs or payment terminals capture card data and PINs.
+
+```mermaid
+flowchart LR
+    SKIM[Skimmer device\nfitted over ATM card slot] --> MAG[Reads magnetic stripe\nas victim inserts card]
+    CAM[Hidden camera\nor fake keypad overlay] --> PIN[Records PIN\nas victim types]
+    MAG & PIN --> CLONE[Attacker clones card]
+    CLONE --> FRAUD[Makes withdrawals\nor purchases]
+```
+
+**Defence:** Check for loose card readers, cover keypad when typing PIN, use contactless payments (chip+PIN, Apple Pay).
+
+### 11.7 Synthetic Identity Fraud
+
+Attacker **combines real and fake information** to create a new fictitious identity — often using a real SSN with a fake name and DOB.
+
+```mermaid
+flowchart TD
+    REAL[Real SSN\ne.g. from a child or\nrecently deceased person] --> SYNTH
+    FAKE[Fake name, DOB, address] --> SYNTH[Synthetic Identity Created]
+    SYNTH --> CREDIT[Apply for credit\nwith no history]
+    CREDIT --> BUILD[Slowly build credit score\nover months or years]
+    BUILD --> BUST[Bust-out fraud:\nmax out all credit lines\nthen disappear]
+```
+
+> Hardest fraud to detect because the SSN belongs to a real (but different) person. Banks often can't tell until the bust-out.
+
+### 11.8 Account Takeover (ATO)
+
+Attacker gains control of an existing legitimate account using stolen credentials or identity information.
+
+```mermaid
+flowchart TD
+    ATK([Attacker]) --> METHOD{How they\ngain access}
+    METHOD -->|Leaked credentials| CRED[Credential stuffing\nor password spraying]
+    METHOD -->|Personal info| RESET[Password reset\nusing DOB, SSN, security questions]
+    METHOD -->|SIM swap| SIM[Receives SMS OTP\nafter porting victim's number]
+    METHOD -->|Phishing| PHISH[Victim enters creds\non fake site]
+
+    CRED & RESET & SIM & PHISH --> ATO[Account Taken Over]
+
+    ATO --> CHANGE[Change email + phone\nlock victim out]
+    ATO --> DRAIN[Drain funds / points / data]
+    ATO --> PIVOT[Use account to\nattack contacts]
+```
+
+### 11.9 Identity Theft Defence Summary
+
+```mermaid
+flowchart TD
+    subgraph Prevent["Prevention"]
+        P1[Use strong unique passwords\n+ password manager]
+        P2[Enable MFA — preferably\nFIDO2 not SMS]
+        P3[Freeze credit reports\nat all bureaus]
+        P4[Shred documents\nwith personal info]
+        P5[Monitor accounts\nfor unusual activity]
+    end
+
+    subgraph Detect["Detection"]
+        D1[Credit monitoring alerts]
+        D2[Bank transaction notifications]
+        D3[Annual free credit report check]
+        D4[Have I Been Pwned — monitor\nfor leaked email/password]
+    end
+
+    subgraph Respond["Response"]
+        R1[Report to bank / card issuer immediately]
+        R2[File police report]
+        R3[Report to national agency\ne.g. FTC, Action Fraud, ACSC]
+        R4[Place fraud alert on credit file]
+        R5[Document all fraudulent transactions]
+    end
+
+    Prevent --> Detect --> Respond
+```
+
+---
+
+## 12. Insider Threat and Privilege Abuse
 
 Not all threats come from outside. Employees, contractors, or admins with legitimate access can misuse it.
 
@@ -320,6 +532,8 @@ flowchart TD
 
 ## Quick Reference Cheat Sheet
 
+### Technical Attack Vectors
+
 | Attack | How it works | Key Defence |
 |---|---|---|
 | **Credential Stuffing** | Leaked creds tried against target | MFA + breach detection |
@@ -332,3 +546,20 @@ flowchart TD
 | **SAML Wrapping** | Modified XML with valid signature | Schema-validated SAML libraries |
 | **SIM Swapping** | Phone number ported to attacker | Use TOTP/FIDO2, not SMS MFA |
 | **Insider Threat** | Legitimate user abuses access | Least privilege + UEBA + PAM |
+
+### Common Identity Theft Techniques
+
+| Technique | Method | Key Defence |
+|---|---|---|
+| **Email Phishing** | Fake email → fake login page → credentials stolen | Security awareness + MFA |
+| **Smishing** | Fake SMS → link → personal info harvested | Never click SMS links from unknown senders |
+| **Vishing** | Fake phone call → victim reveals SSN, DOB, password | Verify caller identity independently |
+| **Data Breach / Dark Web** | Leaked personal data bought and used for fraud | Credit freeze + HIBP monitoring |
+| **Keylogger / Malware** | Records keystrokes, steals saved passwords | Antivirus + avoid pirated software |
+| **Mail Theft** | Physical statements / card offers stolen | Shred documents + mail lock |
+| **Dumpster Diving** | Documents with account numbers recovered | Shred everything with personal info |
+| **Shoulder Surfing** | PIN / password watched in public | Cover keypad, use privacy screen |
+| **Social Engineering** | Pretext to trick staff into resetting account | Knowledge-based auth is weak; use strong MFA |
+| **Card Skimming** | Physical device reads card + captures PIN | Use contactless; cover keypad |
+| **Synthetic Identity** | Real SSN + fake name used to open accounts | SSN + biometric verification at account opening |
+| **Account Takeover** | Multiple methods used to hijack existing account | MFA + anomaly detection + credit freeze |

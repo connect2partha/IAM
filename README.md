@@ -333,8 +333,9 @@
 - Token theft and replay
 - OAuth misuse — open redirectors, implicit flow risks
 - SAML vulnerabilities — XML signature wrapping
-- Insider threat and privilege abuse
 - SIM swapping (MFA bypass)
+- **Common techniques of identity theft** — phishing, smishing, vishing, data breach, malware/keyloggers, mail theft, dumpster diving, shoulder surfing, social engineering/pretexting, card skimming, synthetic identity fraud, account takeover
+- Insider threat and privilege abuse
 
 ---
 
