@@ -33,10 +33,10 @@ flowchart LR
 
 | Concept | Simple Meaning | Example |
 |---|---|---|
-| **Identity** | Who you are | Username, employee ID |
+| **Administration** | Create, manage and retire identities and their access | Onboarding, role changes, offboarding |
 | **Authentication** | Prove who you are | Password + OTP |
 | **Authorization** | What you're allowed to do | Read-only on finance folder |
-| **Accountability** | Track what you did | Login logs, audit trails |
+| **Audit** | Track and review what you did | Login logs, audit trails, access reviews |
 
 ---
 
