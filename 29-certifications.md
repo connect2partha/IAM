@@ -1,5 +1,7 @@
 # IAM Certifications
 
+[← Back to Index](README.md)
+
 > A practical guide to the most valuable certifications in the identity and access management field — what each validates, who it's for, and how to choose.
 
 ---

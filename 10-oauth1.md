@@ -1,5 +1,7 @@
 # OAuth 1.0
 
+[← Back to Index](README.md)
+
 > The original delegated authorisation standard — how apps were first allowed to act on behalf of users without ever seeing their passwords.
 
 ---

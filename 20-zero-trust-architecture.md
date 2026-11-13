@@ -1,5 +1,7 @@
 # Zero Trust Architecture (ZTA)
 
+[← Back to Index](README.md)
+
 > Zero Trust is a security philosophy: stop trusting based on location (like "inside the network") and start trusting based on verified identity, device health, and context — every single time.
 
 ---

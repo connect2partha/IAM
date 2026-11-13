@@ -1,5 +1,7 @@
 # IAM Tools and Platforms
 
+[← Back to Index](README.md)
+
 > A practical guide to the IAM ecosystem — what each category of tool does, what the major players are, and how they fit together.
 
 ---

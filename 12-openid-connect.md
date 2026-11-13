@@ -1,5 +1,7 @@
 # OpenID Connect (OIDC)
 
+[← Back to Index](README.md)
+
 > OIDC is the identity layer built on top of OAuth 2.0 — it answers not just "what can you do?" but "who are you?"
 
 ---

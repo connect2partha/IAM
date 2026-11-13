@@ -1,5 +1,7 @@
 # Directory Services
 
+[← Back to Index](README.md)
+
 > A directory service is the phonebook of your IT environment — it stores who exists, what groups they belong to, and what they're allowed to do.
 
 ---

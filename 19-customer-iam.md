@@ -1,5 +1,7 @@
 # Customer Identity and Access Management (CIAM)
 
+[← Back to Index](README.md)
+
 > CIAM is IAM designed for your *customers*, not your *employees*. The scale is bigger, the trust level is lower, and the user experience must be frictionless — because a bad login experience means lost revenue.
 
 ---

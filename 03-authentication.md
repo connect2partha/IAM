@@ -1,5 +1,7 @@
 # Authentication
 
+[← Back to Index](README.md)
+
 > Authentication answers the question: **"Can you prove you are who you claim to be?"**
 
 Think of it like boarding a flight:

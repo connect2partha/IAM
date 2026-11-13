@@ -1,5 +1,7 @@
 # JSON Web Tokens (JWT)
 
+[← Back to Index](README.md)
+
 > A compact, self-contained token format used across OAuth 2.0, OIDC, and API authentication — in plain language with diagrams.
 
 ---

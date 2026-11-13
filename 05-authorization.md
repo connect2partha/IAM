@@ -1,5 +1,7 @@
 # Authorization
 
+[← Back to Index](README.md)
+
 > Authorization answers: **"What are you allowed to do?"** — after you've already proven who you are.
 
 Think of it like a hotel keycard:

@@ -1,5 +1,7 @@
 # PKI and Certificates
 
+[← Back to Index](README.md)
+
 > Simple explanations with diagrams for how digital certificates work — the foundation of trusted communication on the internet.
 
 ---

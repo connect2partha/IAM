@@ -1,6 +1,6 @@
-[← Back to Index](README.md)
-
 # Cryptography
+
+[← Back to Index](README.md)
 
 > The mathematical foundation behind every secure identity system — how secrets stay secret, how data stays intact, and how you can prove something is genuine.
 

@@ -1,5 +1,7 @@
 # Identity Security Monitoring
 
+[← Back to Index](README.md)
+
 > Simple explanations with diagrams for how to detect and respond to identity-based threats in real time.
 
 ---

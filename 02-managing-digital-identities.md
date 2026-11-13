@@ -1,5 +1,7 @@
 # Managing Digital Identities
 
+[← Back to Index](README.md)
+
 > What a digital identity actually is, the different types, how they are structured, stored, and kept trustworthy across an organisation.
 
 ---

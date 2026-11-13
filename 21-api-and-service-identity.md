@@ -1,5 +1,7 @@
 # API and Service Identity
 
+[← Back to Index](README.md)
+
 > Simple explanations with diagrams for how machines and services prove who they are — not humans.
 
 ---

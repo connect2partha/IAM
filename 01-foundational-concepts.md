@@ -1,5 +1,7 @@
 # IAM Foundational Concepts
 
+[← Back to Index](README.md)
+
 > Simple explanations with diagrams for the core building blocks of Identity and Access Management.
 
 ---

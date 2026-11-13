@@ -1,5 +1,7 @@
 # Multi Factor Authentication (MFA)
 
+[← Back to Index](README.md)
+
 > A deep dive into every MFA method, how each works under the hood, where each breaks, and how to choose the right one.
 
 ---

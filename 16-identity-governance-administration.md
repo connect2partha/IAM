@@ -1,5 +1,7 @@
 # Identity Governance and Administration (IGA)
 
+[← Back to Index](README.md)
+
 > IGA is the control tower of IAM — it ensures the right people have the right access, for the right reasons, at the right time, and that someone is checking regularly.
 
 ---

@@ -1,5 +1,7 @@
 # Protocols and Standards
 
+[← Back to Index](README.md)
+
 > Protocols are the **agreed languages** that systems use to handle identity, authentication, and authorization. Without them, every app would need its own custom login system.
 
 Think of protocols like electrical plugs — they define a standard so any device (identity provider) can plug into any socket (application) around the world.

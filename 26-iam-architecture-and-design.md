@@ -1,5 +1,7 @@
 # IAM Architecture and Design Patterns
 
+[← Back to Index](README.md)
+
 > Simple explanations of how IAM systems are structured — from the choices you make at the drawing board to how you keep them running when things go wrong.
 
 ---

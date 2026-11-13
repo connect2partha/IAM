@@ -1,5 +1,7 @@
 # Privileged Access Management (PAM)
 
+[← Back to Index](README.md)
+
 > PAM is about locking down the most powerful keys to your kingdom — and knowing exactly who used them, when, and why.
 
 ---

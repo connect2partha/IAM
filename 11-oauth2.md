@@ -1,5 +1,7 @@
 # OAuth 2.0
 
+[← Back to Index](README.md)
+
 > The industry-standard framework for delegated authorisation — letting apps access resources on a user's behalf without ever seeing their password.
 
 ---

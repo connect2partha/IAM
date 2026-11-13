@@ -1,5 +1,7 @@
 # Single Sign-On (SSO)
 
+[← Back to Index](README.md)
+
 > Log in once, access everything — no more password fatigue.
 
 ---
